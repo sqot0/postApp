@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from app.api import router as api_router
+from app.utils import lifespan
 
-app = FastAPI()
+app = FastAPI(lifespan=lifespan)
 
 app.include_router(api_router)
 

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from datetime import datetime
 
 class Post(BaseModel):
-    id: int
+    id: str
     title: str
     content: str
     published: datetime
